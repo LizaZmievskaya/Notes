@@ -20,7 +20,7 @@
         for ($i=0; $i<$count_files; $i++){
             $new_filename = md5(microtime(true) . $user_id . $files['name'][$i]);
             $type = explode("/",$files["type"][$i]);
-            $new_file = $new_filename . "." . $type;
+            $new_file = $new_filename . "." . $type[1];
             move_uploaded_file($files["tmp_name"][$i],$upload_dir . $new_file);
             $new_file = '/img/uploads/'.$new_file;
             mysqli_query($connect,"INSERT INTO files VALUES ('','$id_note','$new_file')");

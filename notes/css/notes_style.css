@@ -50,13 +50,6 @@
 }
 
 
-/*html, body{*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-    /*margin: 0;*/
-    /*background-color: white;*/
-/*}*/
-
 #text{
     display: none;
     text-align: center;
@@ -66,71 +59,6 @@
     padding: 200px 20px;
 }
 
-/*#add{*/
-    /*float: right;*/
-    /*position: relative;*/
-    /*text-align: center;*/
-    /*margin: auto;*/
-    /*background-image: url(../img/add.png);*/
-    /*background-size: cover;*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-/*}*/
-/*#add:hover{*/
-    /*background-image: url(../img/add_hover.png);*/
-    /*cursor: pointer;*/
-/*}*/
-
-/*#notes {*/
-    /*position: absolute;*/
-    /*border-right: 1px solid #e3e3e3;*/
-    /*width: 25%;*/
-    /*height: 100%;*/
-/*}*/
-
-/*#scroll {*/
-    /*height: 88%;*/
-    /*overflow-x: hidden;*/
-    /*overflow-y: scroll;*/
-
-/*}*/
-
-/*#title {    */
-    /*background-color: #f2f1f1;*/
-    /*height: 8%;*/
-    /*padding: 15px 20px 10px 24px;*/
-    /*font-family: gotham, helvetica, arial, sans-serif;*/
-    /*color: #878787;*/
-    /*border-bottom: 1px solid #e3e3e3;*/
-    /*display: block;*/
-    /*text-align: left;*/
-    /*vertical-align: top;*/
-    /*font-size: 21px;*/
-    /*letter-spacing: 0.5px;*/
-    /*text-transform: uppercase;*/
-/*}*/
-
-
-/*#center {*/
-    /*display: inline-block;*/
-    /*margin-top: 10px;*/
-/*}*/
-
-/*#add1 {*/
-    /*margin: 0 5px;*/
-/*}*/
-
-/*#content {*/
-    /*position: relative;*/
-    /*float:right;*/
-    /*width: 75%;*/
-    /*height: 100%;*/
-/*}*/
-
-/*#stik {*/
-    /*height: 300px;*/
-    /*margin: 90px 320px;*/
-/*}*/
 
 #new {
     font-size: 28px;
@@ -165,14 +93,6 @@
     font-family: sans-serif;
 }
 
-/*#main {*/
-    /*visibility: collapse;*/
-    /*position: absolute;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-
 #enter {
     font-family: gotham, helvetica, arial, sans-serif;
     font-size: 14px;
@@ -184,95 +104,3 @@
 input[name="attach"]{
     position: absolute;
 }
-/*.button{*/
-    /*margin: 1px;*/
-    /*font-family: gotham,helvetica,arial,sans-serif;*/
-    /*font-size: 11.5pt;*/
-    /*width: 120px;*/
-    /*height: 30px;*/
-    /*background-color: #1da24e;*/
-    /*border: #146231;*/
-    /*color: aliceblue;*/
-    /*cursor: pointer;*/
-/*}*/
-/*.button:hover{*/
-    /*background-color: #31bc64;*/
-/*}*/
-/*#btns {*/
-    /*position: absolute;*/
-    /*bottom: 30px;*/
-    /*right: 170px;*/
-/*}*/
-
-
-/*.left_notes{*/
-    /*display: block;*/
-    /*cursor: pointer;*/
-    /*text-align: left;*/
-    /*color: #878787;*/
-    /*height: 125px;*/
-    /*padding: 20px;*/
-    /*white-space: normal;*/
-    /*overflow-y: hidden;*/
-/*}*/
-
-/*.left_notes:hover{*/
-    /*color: #ffffff;*/
-    /*background-color: rgba(43,181,92,.9);*/
-    /*transition: opacity .1s ease-in-out;*/
-/*}*/
-
-/*#logout{*/
-    /*float: right;*/
-    /*text-align: center;*/
-    /*margin: 13px 30px;*/
-    /*background-color: white;*/
-    /*border: 0;*/
-    /*width: 55px;*/
-    /*height: 55px;    */
-    /*background-image: url(../img/logout.png);*/
-    /*background-size: cover;*/
-/*}*/
-/*#logout:hover{*/
-    /*background-image: url(../img/logout_hover.png);*/
-    /*cursor: pointer;*/
-/*}*/
-
-/*.active{*/
-    /*background-color: #aaffc1;*/
-/*}*/
-/*.file {*/
-    /*margin-left:4px;*/
-    /*bottom: 50px;*/
-    /*font-family: gotham,helvetica,arial,sans-serif;*/
-    /*font-size: 11.5pt;*/
-    /*height: 30px;*/
-    /*cursor: pointer;*/
-/*}*/
-/*.color{*/
-    /*padding: 2.5px;*/
-    /*margin-left:15%;*/
-    /*height: 23px;*/
-    /*cursor: pointer;*/
-    /*width: 23px;*/
-/*}*/
-/*div{*/
-    /*border: 1px solid black;*/
-/*}*/
-/*#file {*/
-    /*background-color: deeppink;*/
-    /*width: 100px;*/
-    /*height: 100px;*/
-/*}*/
-/*.block > div {*/
-    /*float:left*/
-/*}*/
-/*#first {*/
-    /*width: 225px;*/
-    /*height: 20px;*/
-/*}*/
-
-/*#second {*/
-    /*width: 225px;*/
-    /*height:80px;*/
-/*}*/

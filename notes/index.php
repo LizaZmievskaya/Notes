@@ -1,12 +1,9 @@
 <?php
     session_start();
 
-    /*$connect = mysqli_connect('localhost','root','') or die(mysqli_error($connect));
-    mysqli_select_db($connect,'notes');*/
-
-$connect = mysqli_connect("localhost", "root") or die(mysqli_error($connect));
-mysqli_select_db($connect, "notes") or die(mysqli_error($connect));
-mysqli_set_charset($connect, "utf8") or die(mysqli_error($connect));
+    $connect = mysqli_connect("localhost", "root") or die(mysqli_error($connect));
+    mysqli_select_db($connect, "notes") or die(mysqli_error($connect));
+    mysqli_set_charset($connect, "utf8") or die(mysqli_error($connect));
     
     if (isset($_POST['submit'])){
         $login = $_POST['login'];

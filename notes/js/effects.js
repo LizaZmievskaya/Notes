@@ -44,7 +44,6 @@ $(document).ready(function() {
         $.ajax({
             url:'save.php',
             method:'POST',
-            //data:'name='+name+'&'+'content='+content+'&attach='+new FormData(file),
             data:new FormData($(this).parent().parent()),
             type: 'Json',
             success: function(data){
@@ -59,7 +58,6 @@ $(document).ready(function() {
                 div.appendChild(content);
                 div.setAttribute('data-id',data.id_note);
                 $(div).addClass('col-md-4');
-                //$('#text').css("display","none");
                 $("#myModal").modal("hide");
             }
         });
@@ -147,7 +145,7 @@ $(document).ready(function() {
     });
 
     $('a[name=exit]').on('click',function(){
-        window.location.replace("http://localhost:81/notes/index.php");
+        window.location.replace("http://" + window.location.host + "/notes/index.php");
     });
 
 });

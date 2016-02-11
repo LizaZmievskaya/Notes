@@ -85,7 +85,6 @@ $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users 
                 </div>
                 <div class="modal-footer">
                     <input name="attach[]" type="file" multiple>
-<!--                    <button name="save" type="button" class="btn btn-success">Сохранить</button>-->
                     <input name="save" type="submit" class="btn btn-success" value="Сохранить">
                 </div>
             </div>
@@ -100,7 +99,6 @@ $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users 
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<!--                    <div id="new">Дайте название заметке</div>-->
                     <input name="name" id="name" type="text">
                 </div>
                 <div class="modal-body">
