@@ -148,6 +148,26 @@ $(document).ready(function() {
         window.location.replace("http://" + window.location.host + "/notes/index.php");
     });
 
+    $('div.footer').on('click', function () {
+        var id = $(this).parent().data('id');
+        $('#fileModal').attr('data-id',id);
+        $.ajax({
+            url:'load_file.php',
+            method:'POST',
+            data:'id_note=' + id,
+            type:'Json',
+            success:function(data){
+                data = jQuery.parseJSON(data);
+                var count = 1;
+                for(var i =0; i < data.length; i++){
+                    $('div.grey').append("<div class=\"files_modal\">Файл " + count + "</div><br>");
+                    $('div.grey').append("<a class=\"download pull-right\" href=\"/notes/download.php?file=" + data[i] + "\">Ссылка</a><br>");
+                    count++;
+                }
+            }
+        });
+    });
+
 });
 
 

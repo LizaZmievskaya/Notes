@@ -5,12 +5,15 @@ session_start();
 $connect = mysqli_connect("localhost", "root") or die(mysqli_error($connect));
 mysqli_select_db($connect, "notes") or die(mysqli_error($connect));
 mysqli_set_charset($connect, "utf8") or die(mysqli_error($connect));
+
 $user_id = mysqli_real_escape_string($connect, $_SESSION['user_id']);
 $query_string = "SELECT n.*, count(f.file) AS count FROM note AS n LEFT JOIN files AS f ON n.id=f.id_note WHERE n.id_users=$user_id GROUP BY n.id";
 $query = mysqli_query($connect, $query_string);
 $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users  WHERE id_users=$user_id"));
 
+
 ?>
+
 <!DOCTYPE>
 <html>
 <head>
@@ -63,7 +66,7 @@ $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users 
             <input type="checkbox" class="pull-right">
             <div><?= $row['name'] ?></div>
             <div class="content"><?= $row['content'] ?></div>
-            <div class="footer">Прикрепленные файлы: <?= $row['count']?></div>
+            <div class="footer" data-toggle="modal" data-target="#fileModal">Прикрепленные файлы: <?= $row['count']?></div>
         </div>
         <?php } ?>
     </div>
@@ -85,6 +88,7 @@ $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users 
                 </div>
                 <div class="modal-footer">
                     <input name="attach[]" type="file" multiple>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                     <input name="save" type="submit" class="btn btn-success" value="Сохранить">
                 </div>
             </div>
@@ -106,10 +110,28 @@ $user_name = mysqli_fetch_assoc(mysqli_query($connect, "SELECT login FROM users 
                 </div>
                 <div class="modal-footer">
                     <input name="attach" type="file">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                     <button name="save_edit" type="submit" class="btn btn-success">Сохранить</button>
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+
+<!--МОДАЛЬНОЕ ОКНО С ФАЙЛОМ-->
+<div class="modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    Прикрепленные файлы
+                </div>
+                <div class="modal-body grey"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
     </div>
 </div>
 
